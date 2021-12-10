@@ -1,0 +1,3 @@
+
+#define _XTAL_FREQ  40000000UL
+#define PBCLK (_XTAL_FREQ / 4)

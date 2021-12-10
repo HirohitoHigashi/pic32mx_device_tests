@@ -50,3 +50,17 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# editor backup files.
+*.bak*
+*~
+
+# MPLAB X generated files.
+Makefile*
+Package-default.bash
+private.xml
+.generated_files/
+dist/
+build/
+debug/
+release/
