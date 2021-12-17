@@ -1,7 +1,7 @@
 /*! @file
   @brief
 
-  PIC32MX UART I/O no interrupt light weight version.
+  PIC32MX UART I/O no interrupt lite weight version.
 
   @author hirohito higashi
   @version v1.00
