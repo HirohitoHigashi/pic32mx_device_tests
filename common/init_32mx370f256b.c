@@ -1,15 +1,12 @@
 
 // DEVCFG3
+#pragma config FSRSSEL = PRIORITY_7    // Shadow Register Set Priority Select->SRS Priority 7
 #pragma config PMDL1WAY = ON    // Peripheral Module Disable Configuration->Allow only one reconfiguration
 #pragma config IOL1WAY = ON    // Peripheral Pin Select Configuration->Allow only one reconfiguration
-#pragma config FUSBIDIO = ON    // USB USID Selection->Controlled by the USB Module
-#pragma config FVBUSONIO = ON    // USB VBUS ON Selection->Controlled by USB Module
 
 // DEVCFG2
 #pragma config FPLLIDIV = DIV_2    // PLL Input Divider->2x Divider
 #pragma config FPLLMUL = MUL_20    // PLL Multiplier->20x Multiplier
-#pragma config UPLLIDIV = DIV_12    // USB PLL Input Divider->12x Divider
-#pragma config UPLLEN = OFF    // USB PLL Enable->Disabled and Bypassed
 #pragma config FPLLODIV = DIV_2    // System PLL Output Clock Divider->PLL Divide by 2
 
 // DEVCFG1
@@ -37,26 +34,48 @@
 void system_init( void )
 {
   // Setting the Output Latch SFR(s)
-  LATA = 0x0000;
   LATB = 0x0000;
+  LATC = 0x0000;
+  LATD = 0x0000;
+  LATE = 0x0000;
+  LATF = 0x0000;
+  LATG = 0x0000;
 
   // Setting the GPIO Direction SFR(s)
-  TRISA = 0x001F;
-  TRISB = 0xEFBF;
+  TRISB = 0xFFFF;
+  TRISC = 0xF000;
+  TRISD = 0x0FFF;
+  TRISE = 0x00FF;
+  TRISF = 0x007F;
+  TRISG = 0x03CC;
 
   // Setting the Weak Pull Up and Weak Pull Down SFR(s)
-  CNPUA = 0x0000;
-  CNPUB = 0x0000;
-  CNPDA = 0x0000;
   CNPDB = 0x0000;
+  CNPDC = 0x0000;
+  CNPDD = 0x0000;
+  CNPDE = 0x0000;
+  CNPDF = 0x0000;
+  CNPDG = 0x0000;
+  CNPUB = 0x0000;
+  CNPUC = 0x0000;
+  CNPUD = 0x0000;
+  CNPUE = 0x0000;
+  CNPUF = 0x0000;
+  CNPUG = 0x0000;
 
   // Setting the Open Drain SFR(s)
-  ODCA = 0x0000;
   ODCB = 0x0000;
+  ODCC = 0x0000;
+  ODCD = 0x0000;
+  ODCE = 0x0000;
+  ODCF = 0x0000;
+  ODCG = 0x0000;
 
   // Setting the Analog/Digital Configuration SFR(s)
-  ANSELA = 0x0003;
-  ANSELB = 0xE00C;	// RB0,RB1 assign programming port.
+  ANSELB = 0xFFFC;	// RB0,RB1 assign programming port.
+  ANSELD = 0x000E;
+  ANSELE = 0x00F4;
+  ANSELG = 0x03C0;
 
 
   // Enable the multi vector

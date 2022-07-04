@@ -2,14 +2,10 @@
 // DEVCFG3
 #pragma config PMDL1WAY = ON    // Peripheral Module Disable Configuration->Allow only one reconfiguration
 #pragma config IOL1WAY = ON    // Peripheral Pin Select Configuration->Allow only one reconfiguration
-#pragma config FUSBIDIO = ON    // USB USID Selection->Controlled by the USB Module
-#pragma config FVBUSONIO = ON    // USB VBUS ON Selection->Controlled by USB Module
 
 // DEVCFG2
 #pragma config FPLLIDIV = DIV_2    // PLL Input Divider->2x Divider
 #pragma config FPLLMUL = MUL_20    // PLL Multiplier->20x Multiplier
-#pragma config UPLLIDIV = DIV_12    // USB PLL Input Divider->12x Divider
-#pragma config UPLLEN = OFF    // USB PLL Enable->Disabled and Bypassed
 #pragma config FPLLODIV = DIV_2    // System PLL Output Clock Divider->PLL Divide by 2
 
 // DEVCFG1
@@ -42,7 +38,7 @@ void system_init( void )
 
   // Setting the GPIO Direction SFR(s)
   TRISA = 0x001F;
-  TRISB = 0xEFBF;
+  TRISB = 0xFFFF;
 
   // Setting the Weak Pull Up and Weak Pull Down SFR(s)
   CNPUA = 0x0000;
@@ -56,7 +52,7 @@ void system_init( void )
 
   // Setting the Analog/Digital Configuration SFR(s)
   ANSELA = 0x0003;
-  ANSELB = 0xE00C;	// RB0,RB1 assign programming port.
+  ANSELB = 0xF00C;	// RB0,RB1 assign programming port.
 
 
   // Enable the multi vector

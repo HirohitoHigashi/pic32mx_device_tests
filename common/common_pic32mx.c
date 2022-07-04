@@ -2,9 +2,8 @@
   common functions
 */
 
-#if !defined(_XTAL_FREQ)
-#error NOT DEFINED _XTAL_FREQ
-#endif
+#include "clock_freq.h"
+
 
 //================================================================
 /*! spin lock delay functions.
