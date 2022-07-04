@@ -56,10 +56,10 @@ dkms.conf
 *~
 
 # MPLAB X generated files.
+.generated_files/
 Makefile*
 Package-default.bash
-private.xml
-.generated_files/
+*/nbproject/private/
 dist/
 build/
 debug/
