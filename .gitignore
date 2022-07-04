@@ -57,8 +57,8 @@ dkms.conf
 
 # MPLAB X generated files.
 .generated_files/
-Makefile*
 Package-default.bash
+*/nbproject/Makefile*
 */nbproject/private/
 dist/
 build/
